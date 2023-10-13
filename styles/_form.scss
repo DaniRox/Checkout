@@ -1,0 +1,96 @@
+@use "media-queries";
+@use "globals";
+
+%label{
+    
+}
+
+%inputs{
+    font-size: 1rem;
+    font-weight: 600;
+    color: globals.$jet;
+    border: 1px solid globals.$gray;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0.7rem;
+    box-sizing: border-box;
+    height: 3.3rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+
+    .fieldset{
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+
+        legend{
+            color: globals.$jet;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+    
+        label{
+            color: globals.$davys-gray;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #label-mid{
+            width: 40%;
+        }
+    
+        input{
+            @extend %inputs;
+            width: 100%;
+        }
+    }
+
+    .fieldset-mid{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .group-form{
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+
+            label{
+                color: globals.$davys-gray;
+                font-size: 0.8rem;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+            }
+
+            #countries, #cp{
+                @extend %inputs;
+                background-color: globals.$white;
+            }
+        }
+    }
+
+    label{
+        color: globals.$davys-gray;
+        font-weight: 600;
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    #btn-submit{
+        color: globals.$white;
+        font-size: 1.4rem;
+        font-weight: 600;
+        background-color: globals.$sandy-brown;
+        width: 48%;
+        height: 4.5rem;
+        border-radius: 1rem;
+        border: none;
+        align-self: flex-end;
+    }
+}

@@ -1,0 +1,17 @@
+@use "media-queries";
+
+$jet: #333333;
+$davys-gray: #4E5150;
+$gray: #828282;
+$silver: #BDBDBD;
+$sandy-brown: #F2994A;
+$white-smoke: #F2F2F2;
+$white: #ffffff;
+
+$montserrat: 'Montserrat', sans-serif;   
+
+html{
+    font-size: 12px;
+    font-family: $montserrat;
+    padding: 1rem;
+}

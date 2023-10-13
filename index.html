@@ -8,17 +8,18 @@
   maximum-scale=5"
     />
 
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
     <link rel="icon" href="devchallenges.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 
     <link
       rel="shortcut icon"
       type="image/x-icon"
       href="https://devchallenges.io/"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
     />
 
     <title>Devchallenges</title>
@@ -36,40 +37,49 @@
 
       <form action="">
 
-        <fieldset>
+        <fieldset class="fieldset">
           <legend>Contact information</legend>
-          <label for="">E-mail</label>
-          <input type="email" value="Enter your email...">
-          <label for="">Phone</label>
-          <input type="number" value="Enter your phone...">
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email" placeholder="Enter your email...">
+          <label for="phone">Phone</label>
+          <input type="number" name="phone" id="phone" placeholder="Enter your phone...">
         </fieldset>
 
-        <fieldset>
+        <fieldset class="fieldset">
           <legend>Shipping address</legend>
-          <label for="">Full name</label>
-          <input type="text" value="Your full name...">
-          <label for="">Address</label>
-          <input type="text" value="Your address...">
-          <label for="">city</label>
-          <input type="text" value="Your city...">
-          <label for="">Country</label>
-          <select name="countries" id="countries">
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-          </select>
-          <label for="">Postal code</label>
-          <input type="text" value="Your postal code...">
+          <label for="name">Full name</label>
+          <input type="text" name="name" id="name" placeholder="Your full name...">
+          <label for="address">Address</label>
+          <input type="text" name="address" id="address" placeholder="Your address...">
+          <label for="city">City</label>
+          <input type="text" name="city" id="city" placeholder="Your city...">
         </fieldset>
 
-        <label for=""><input type="checkbox">Save this information for next time</label>
+        <fieldset class="fieldset-mid">
+          <div class="group-form">
+            <label for="countries">Country</label>
+            <select name="countries" id="countries">
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+          </div>
+          <div class="group-form">
+            <label for="cp">Postal code</label>
+            <input type="text" name="cp" id="cp" placeholder="Your postal code...">
+          </div>
 
-        <input type="submit" value="Continue">
+
+        </fieldset>
+
+        <label for="check"><input type="checkbox" name="check" id="check">Save this information for next time</label>
+
+        <input type="submit" id="btn-submit" value="Continue">
 
       </form>
 

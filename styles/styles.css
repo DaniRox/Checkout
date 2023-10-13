@@ -1,0 +1,82 @@
+html {
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  padding: 1rem;
+}
+
+form .fieldset-mid .group-form #countries, form .fieldset-mid .group-form #cp, form .fieldset input {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333333;
+  border: 1px solid #828282;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0.7rem;
+  box-sizing: border-box;
+  height: 3.3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+form .fieldset {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+form .fieldset legend {
+  color: #333333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+form .fieldset label {
+  color: #4E5150;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+form .fieldset #label-mid {
+  width: 40%;
+}
+form .fieldset input {
+  width: 100%;
+}
+form .fieldset-mid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+form .fieldset-mid .group-form {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+form .fieldset-mid .group-form label {
+  color: #4E5150;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+form .fieldset-mid .group-form #countries, form .fieldset-mid .group-form #cp {
+  background-color: #ffffff;
+}
+form label {
+  color: #4E5150;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+form #btn-submit {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: #F2994A;
+  width: 48%;
+  height: 4.5rem;
+  border-radius: 1rem;
+  border: none;
+  align-self: flex-end;
+}/*# sourceMappingURL=styles.css.map */
