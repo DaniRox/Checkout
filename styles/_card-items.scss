@@ -1,0 +1,117 @@
+@use "media-queries";
+@use "globals";
+
+.card-items{
+    width: 100%;
+    background-color: globals.$white-smoke;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+
+    @include media-queries.desktop-s{
+        width: 50rem;
+    }
+
+    @include media-queries.desktop{
+        margin-left: 7rem;
+        width: 30rem;
+    }
+
+    .div-item{
+        margin: 1rem 2.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .img-item{
+            width: 10rem;
+            border-radius: 1rem;
+        }
+
+        .info-item{
+            width: 10rem;
+            margin: 1.5rem;
+            display: flex;
+            flex-direction: column;
+
+            .title{
+                font-size: 1rem;
+                font-weight: 600;
+                color: globals.$jet;
+                margin-bottom: 1rem;
+            }
+
+            .div-spans{
+                margin-bottom: 2rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .span-primary{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    color: globals.$sandy-brown;
+                    margin-right: 1rem;
+                }
+    
+                .span-secondary{
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    color: globals.$jet;
+                }    
+            }
+
+            .amount-item{
+                height: 2rem;
+                padding: 1rem;
+                border: 1px solid globals.$gray;
+                border-radius: 1rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                button{
+                    width: 2rem;
+                    height: 2rem;
+                    color: globals.$gray;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    border: none;
+                    border-radius: 0.5rem;
+                    background-color: globals.$silver;
+                }
+
+                #amount{
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    color: globals.$jet;
+                }
+            }
+        }
+    }
+
+    .div-total{
+        margin-top: 2rem;
+        padding: 2.5rem;
+
+        .line{
+            width: 100%;
+            border: 1px solid globals.$silver;
+        }
+
+        .spans-total{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            span{
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: globals.$jet;
+                margin: 1rem 0;
+            }
+        }
+    }
+}

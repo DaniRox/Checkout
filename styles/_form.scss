@@ -2,7 +2,10 @@
 @use "globals";
 
 %label{
-    
+    color: globals.$davys-gray;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600; 
 }
 
 %inputs{
@@ -12,21 +15,35 @@
     border: 1px solid globals.$gray;
     border-radius: 1rem;
     margin-bottom: 1.5rem;
-    padding: 0.7rem;
+    padding: 0.7rem 0.7rem 0.7rem 3rem;
     box-sizing: border-box;
-    height: 3.3rem;
+    height: 3.5rem;
+
+    &:focus-visible{
+        outline: none;
+        box-shadow: 2px 2px 5px globals.$sandy-brown;
+    }
+
+    @include media-queries.desktop{
+        height: 4rem;
+    }
 }
 
 form{
+    width: 100%;
     display: flex;
     flex-direction: column;
+
+    @include media-queries.desktop-s{
+        width: 50rem;
+    }
 
     .fieldset{
         display: flex;
         flex-direction: column;
-        margin-top: 3rem;
 
         legend{
+            padding-top: 3rem;
             color: globals.$jet;
             font-size: 1.2rem;
             font-weight: 600;
@@ -34,18 +51,48 @@ form{
         }
     
         label{
-            color: globals.$davys-gray;
-            font-size: 0.8rem;
-            margin-bottom: 0.5rem;
+            @extend %label;
+            width: 100%;
         }
 
         #label-mid{
+            @extend %label;
             width: 40%;
         }
     
         input{
             @extend %inputs;
             width: 100%;
+        }
+
+        #email{
+            background-image: url(../assets/envelope-fill.svg);
+            background-repeat: no-repeat;
+            background-position: 1rem;
+        }
+
+        #phone{
+            background-image: url(../assets/telephone-fill.svg);
+            background-repeat: no-repeat;
+            background-position: 1rem;
+        }
+
+        #name{
+            background-image: url(../assets/person-circle.svg);
+            background-repeat: no-repeat;
+            background-position: 1rem;
+        }
+
+        #address{
+            background-image: url(../assets/house-door-fill.svg);
+            background-repeat: no-repeat;
+            background-position: 1rem;
+        }
+
+        #city{
+            background-image: url(../assets/buildings-fill.svg);
+            background-repeat: no-repeat;
+            background-position: 1rem;
         }
     }
 
@@ -60,26 +107,51 @@ form{
             flex-direction: column;
 
             label{
-                color: globals.$davys-gray;
-                font-size: 0.8rem;
-                font-weight: 600;
-                margin-bottom: 0.5rem;
+                @extend %label;
             }
 
             #countries, #cp{
                 @extend %inputs;
                 background-color: globals.$white;
             }
+
+            #countries{
+                background-image: url(../assets/globe-americas.svg);
+                background-repeat: no-repeat;
+                background-position: 1rem;
+                
+            }
+
+            #cp{
+                background-image: url(../assets/mailbox2-flag.svg);
+                background-repeat: no-repeat;
+                background-position: 1rem;
+            }
         }
     }
 
     label{
-        color: globals.$davys-gray;
-        font-weight: 600;
-        font-size: 0.8rem;
-        margin-bottom: 0.5rem;
+        @extend %label;
         display: flex;
         align-items: center;
+
+        #check{
+            appearance: none;
+            width: 1.6rem;
+            height: 1.6rem;
+            background-color: globals.$white;
+            border: 1px solid globals.$gray;
+            border-radius: 0.4rem;
+            margin: 0 1rem 0 0;
+        }
+
+        #check:checked{
+            background-color: globals.$white;
+            background-image: url(../assets/check.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 0.9rem;
+        }
     }
 
     #btn-submit{
@@ -92,5 +164,19 @@ form{
         border-radius: 1rem;
         border: none;
         align-self: flex-end;
+        transition: all 0.3s;
+
+        &:hover{
+            background-color: globals.$sandy-brown-dark;
+            transform: scale(0.97, 0.97);
+        }
+
+        &:active{
+            background-color: #c16e26;
+        }
+
+        @include media-queries.desktop-s{
+            width: 16rem;
+        }
     }
 }

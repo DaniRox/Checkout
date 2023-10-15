@@ -1,7 +1,45 @@
 html {
   font-size: 12px;
   font-family: "Montserrat", sans-serif;
-  padding: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+html body {
+  padding: 3% 15%;
+}
+html body h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+@media screen and (min-width: 1024px) {
+  html body h1 {
+    font-size: 2.8rem;
+  }
+}
+html body main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  html body main {
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+form label, form .fieldset-mid .group-form label, form .fieldset #label-mid, form .fieldset label {
+  color: #4E5150;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 form .fieldset-mid .group-form #countries, form .fieldset-mid .group-form #cp, form .fieldset input {
@@ -11,36 +49,74 @@ form .fieldset-mid .group-form #countries, form .fieldset-mid .group-form #cp, f
   border: 1px solid #828282;
   border-radius: 1rem;
   margin-bottom: 1.5rem;
-  padding: 0.7rem;
+  padding: 0.7rem 0.7rem 0.7rem 3rem;
   box-sizing: border-box;
-  height: 3.3rem;
+  height: 3.5rem;
+}
+form .fieldset-mid .group-form #countries:focus-visible, form .fieldset-mid .group-form #cp:focus-visible, form .fieldset input:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 5px #F2994A;
+}
+@media screen and (min-width: 1024px) {
+  form .fieldset-mid .group-form #countries, form .fieldset-mid .group-form #cp, form .fieldset input {
+    height: 4rem;
+  }
 }
 
 form {
+  width: 100%;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 770px) {
+  form {
+    width: 50rem;
+  }
 }
 form .fieldset {
   display: flex;
   flex-direction: column;
-  margin-top: 3rem;
 }
 form .fieldset legend {
+  padding-top: 3rem;
   color: #333333;
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 form .fieldset label {
-  color: #4E5150;
-  font-size: 0.8rem;
-  margin-bottom: 0.5rem;
+  width: 100%;
 }
 form .fieldset #label-mid {
   width: 40%;
 }
 form .fieldset input {
   width: 100%;
+}
+form .fieldset #email {
+  background-image: url(../assets/envelope-fill.svg);
+  background-repeat: no-repeat;
+  background-position: 1rem;
+}
+form .fieldset #phone {
+  background-image: url(../assets/telephone-fill.svg);
+  background-repeat: no-repeat;
+  background-position: 1rem;
+}
+form .fieldset #name {
+  background-image: url(../assets/person-circle.svg);
+  background-repeat: no-repeat;
+  background-position: 1rem;
+}
+form .fieldset #address {
+  background-image: url(../assets/house-door-fill.svg);
+  background-repeat: no-repeat;
+  background-position: 1rem;
+}
+form .fieldset #city {
+  background-image: url(../assets/buildings-fill.svg);
+  background-repeat: no-repeat;
+  background-position: 1rem;
 }
 form .fieldset-mid {
   display: flex;
@@ -52,22 +128,40 @@ form .fieldset-mid .group-form {
   display: flex;
   flex-direction: column;
 }
-form .fieldset-mid .group-form label {
-  color: #4E5150;
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
 form .fieldset-mid .group-form #countries, form .fieldset-mid .group-form #cp {
   background-color: #ffffff;
 }
+form .fieldset-mid .group-form #countries {
+  background-image: url(../assets/globe-americas.svg);
+  background-repeat: no-repeat;
+  background-position: 1rem;
+}
+form .fieldset-mid .group-form #cp {
+  background-image: url(../assets/mailbox2-flag.svg);
+  background-repeat: no-repeat;
+  background-position: 1rem;
+}
 form label {
-  color: #4E5150;
-  font-weight: 600;
-  font-size: 0.8rem;
-  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
+}
+form label #check {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: #ffffff;
+  border: 1px solid #828282;
+  border-radius: 0.4rem;
+  margin: 0 1rem 0 0;
+}
+form label #check:checked {
+  background-color: #ffffff;
+  background-image: url(../assets/check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0.9rem;
 }
 form #btn-submit {
   color: #ffffff;
@@ -79,4 +173,120 @@ form #btn-submit {
   border-radius: 1rem;
   border: none;
   align-self: flex-end;
+  transition: all 0.3s;
+}
+form #btn-submit:hover {
+  background-color: #da853a;
+  transform: scale(0.97, 0.97);
+}
+form #btn-submit:active {
+  background-color: #c16e26;
+}
+@media screen and (min-width: 770px) {
+  form #btn-submit {
+    width: 16rem;
+  }
+}
+
+.card-items {
+  width: 100%;
+  background-color: #F2F2F2;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+@media screen and (min-width: 770px) {
+  .card-items {
+    width: 50rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card-items {
+    margin-left: 7rem;
+    width: 30rem;
+  }
+}
+.card-items .div-item {
+  margin: 1rem 2.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.card-items .div-item .img-item {
+  width: 10rem;
+  border-radius: 1rem;
+}
+.card-items .div-item .info-item {
+  width: 10rem;
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.card-items .div-item .info-item .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+.card-items .div-item .info-item .div-spans {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.card-items .div-item .info-item .div-spans .span-primary {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #F2994A;
+  margin-right: 1rem;
+}
+.card-items .div-item .info-item .div-spans .span-secondary {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #333333;
+}
+.card-items .div-item .info-item .amount-item {
+  height: 2rem;
+  padding: 1rem;
+  border: 1px solid #828282;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-items .div-item .info-item .amount-item button {
+  width: 2rem;
+  height: 2rem;
+  color: #828282;
+  font-size: 1.6rem;
+  font-weight: 400;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #E0E0E0;
+}
+.card-items .div-item .info-item .amount-item #amount {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333333;
+}
+.card-items .div-total {
+  margin-top: 2rem;
+  padding: 2.5rem;
+}
+.card-items .div-total .line {
+  width: 100%;
+  border: 1px solid #E0E0E0;
+}
+.card-items .div-total .spans-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card-items .div-total .spans-total span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333333;
+  margin: 1rem 0;
 }/*# sourceMappingURL=styles.css.map */
