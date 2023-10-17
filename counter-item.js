@@ -9,6 +9,7 @@ let shipping = document.getElementById("")
 let total = document.getElementById("total");
 
 
+
 function add(){
     let amount = parseInt(amountItem.textContent);
     amountItem.innerHTML = amount + 1;
