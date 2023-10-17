@@ -42,9 +42,9 @@
               <span class="span-secondary">$94.99</span>
             </div>
             <div class="amount-item">
-              <button type="button" id="btn-add">-</button>
+              <button type="button" id="btn-subtract" onclick="subtract()">-</button>
               <span id="amount">1</span>
-              <button type="button" id="btn-subtract">+</button>
+              <button type="button" id="btn-add" onclick="add()">+</button>
             </div>
           </div>
         </div>
@@ -58,9 +58,9 @@
               <span class="span-secondary">$124.99</span>
             </div>
             <div class="amount-item">
-              <button type="button" id="btn-add">-</button>
+              <button type="button" id="btn-subtract" onclick="subtract()">-</button>
               <span id="amount">1</span>
-              <button type="button" id="btn-subtract">+</button>
+              <button type="button" id="btn-add" onclick="add()">+</button>
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@
           <div class="line"></div>
           <div class="spans-total">
             <span>Shipping</span>
-            <span>$19</span>
+            <span id="shipping">$19</span>
           </div>
           <div class="line"></div>
           <div class="spans-total">
@@ -136,6 +136,8 @@
     <footer>
 
     </footer>
+
+    <script src="counter-item.js"></script>
 
   </body>
 </html>

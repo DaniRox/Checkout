@@ -81,6 +81,16 @@
                     border: none;
                     border-radius: 0.5rem;
                     background-color: globals.$silver;
+                    transition: all 0.3s;
+
+                    &:hover{
+                        background-color: #c9c9c9;
+                        transform: scale(0.97, 0.97);
+                    }
+
+                    &:active{
+                        background-color: #a8a6a6;
+                    }
                 }
 
                 #amount{

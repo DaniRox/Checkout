@@ -263,6 +263,14 @@ form #btn-submit:active {
   border: none;
   border-radius: 0.5rem;
   background-color: #E0E0E0;
+  transition: all 0.3s;
+}
+.card-items .div-item .info-item .amount-item button:hover {
+  background-color: #c9c9c9;
+  transform: scale(0.97, 0.97);
+}
+.card-items .div-item .info-item .amount-item button:active {
+  background-color: #a8a6a6;
 }
 .card-items .div-item .info-item .amount-item #amount {
   font-size: 1.4rem;
