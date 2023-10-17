@@ -90,9 +90,6 @@ form .fieldset label {
 form .fieldset #label-mid {
   width: 40%;
 }
-form .fieldset input {
-  width: 100%;
-}
 form .fieldset #email {
   background-image: url(../assets/envelope-fill.svg);
   background-repeat: no-repeat;
@@ -124,11 +121,12 @@ form .fieldset-mid {
   justify-content: space-between;
 }
 form .fieldset-mid .group-form {
-  width: 48%;
+  width: 45%;
   display: flex;
   flex-direction: column;
 }
 form .fieldset-mid .group-form #countries, form .fieldset-mid .group-form #cp {
+  width: 100%;
   background-color: #ffffff;
 }
 form .fieldset-mid .group-form #countries {
