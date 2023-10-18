@@ -48,12 +48,13 @@
                 flex-direction: row;
                 align-items: center;
 
-                .span-primary{
+                p{
                     font-size: 1.2rem;
                     font-weight: 600;
                     color: globals.$sandy-brown;
                     margin-right: 1rem;
                 }
+
     
                 .span-secondary{
                     font-size: 0.8rem;
@@ -116,12 +117,13 @@
             flex-direction: row;
             justify-content: space-between;
 
-            span{
+            p{
                 font-size: 1.2rem;
                 font-weight: 600;
                 color: globals.$jet;
                 margin: 1rem 0;
             }
+
         }
     }
 }

@@ -233,7 +233,7 @@ form #btn-submit:active {
   flex-direction: row;
   align-items: center;
 }
-.card-items .div-item .info-item .div-spans .span-primary {
+.card-items .div-item .info-item .div-spans p {
   font-size: 1.2rem;
   font-weight: 600;
   color: #F2994A;
@@ -290,7 +290,7 @@ form #btn-submit:active {
   flex-direction: row;
   justify-content: space-between;
 }
-.card-items .div-total .spans-total span {
+.card-items .div-total .spans-total p {
   font-size: 1.2rem;
   font-weight: 600;
   color: #333333;
