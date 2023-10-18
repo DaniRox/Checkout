@@ -243,6 +243,7 @@ form #btn-submit:active {
   font-size: 0.8rem;
   font-weight: 600;
   color: #333333;
+  text-decoration: line-through;
 }
 .card-items .div-item .info-item .amount-item {
   height: 2rem;
