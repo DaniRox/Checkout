@@ -296,4 +296,46 @@ form #btn-submit:active {
   font-weight: 600;
   color: #333333;
   margin: 1rem 0;
+}
+
+#submit, #submit-error {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+  background-color: rgba(224, 224, 224, 0.631372549);
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+#submit .card-submit, #submit .card-submit-error, #submit-error .card-submit, #submit-error .card-submit-error {
+  width: 20rem;
+  height: 10rem;
+  background-color: #F2994A;
+  color: #333333;
+  border-radius: 1rem;
+  padding: 4rem;
+  font-size: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#submit .card-submit #btn-ok, #submit .card-submit #btn-error, #submit .card-submit-error #btn-ok, #submit .card-submit-error #btn-error, #submit-error .card-submit #btn-ok, #submit-error .card-submit #btn-error, #submit-error .card-submit-error #btn-ok, #submit-error .card-submit-error #btn-error {
+  height: 3.8rem;
+  width: 6rem;
+  background-color: #E0E0E0;
+  color: #333333;
+  border: none;
+  border-radius: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  transition: all 0.3s;
+}
+#submit .card-submit #btn-ok:hover, #submit .card-submit #btn-error:hover, #submit .card-submit-error #btn-ok:hover, #submit .card-submit-error #btn-error:hover, #submit-error .card-submit #btn-ok:hover, #submit-error .card-submit #btn-error:hover, #submit-error .card-submit-error #btn-ok:hover, #submit-error .card-submit-error #btn-error:hover {
+  background-color: #c5c3c3;
+  transform: scale(0.97, 0.97);
 }/*# sourceMappingURL=styles.css.map */
